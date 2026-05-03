@@ -23,7 +23,7 @@ export default function StartCenter() {
     <div style={{ width:'100vw', height:'100vh', background:`url(${A}/wallpaper/default.jpg) center/cover no-repeat`,
                   display:'flex', alignItems:'center', justifyContent:'center', padding:'40px',
                   fontFamily:"'천리마', 'Lucida Grande', sans-serif" }}>
-      <div style={{ width:`${W}px`, boxShadow:'-9px -8px 12px rgba(0,0,0,0.66)',
+      <div style={{ width:`${W}px`, boxShadow:'9px 8px 12px rgba(0,0,0,0.66)',
                     display:'flex', flexDirection:'column' }}>
 
         {/* Titlebar */}
