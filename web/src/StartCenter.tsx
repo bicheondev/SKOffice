@@ -61,12 +61,13 @@ export default function StartCenter() {
                         backgroundSize:'203px 582px', backgroundRepeat:'no-repeat' }} />
 
           {/* Content overlay: positioned over the background */}
-          <div style={{ position:'absolute', left:`${SHADOW+BTN_POS}px`, top:`${SHADOW}px`,
+          <div style={{ position:'absolute', left:'229px', top:`${SHADOW}px`,
                         right:`${SHADOW}px`, bottom:`${SHADOW}px`,
                         display:'flex', flexDirection:'column' }}>
 
             {/* Buttons: 3 rows x 2 cols, starting at mnBtnTop=150 from content top */}
-            <div style={{ marginTop:`${BTN_TOP - SHADOW}px` }}>
+            <div style={{ marginTop:'20px' }}>
+              <h2 style={{ fontSize:'18px', fontWeight:'normal', marginBottom:'20px', marginTop:0, color:'#222', letterSpacing:'0.05em' }}>새 문서 만들기</h2>
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'10px 16px' }}>
                 {APPS.map(([label, icon, key]) => (
                   <button key={key} style={{ display:'flex', alignItems:'center', gap:'8px',
