@@ -4,7 +4,7 @@ const createItems = [
   { label: '본문문서', icon: `${ASSET_BASE}/icons/res/odt_32.png` },
   { label: '수학식', icon: `${ASSET_BASE}/icons/res/odf_32.png` },
   { label: '자료표', icon: `${ASSET_BASE}/icons/res/ods_32.png` },
-  { label: '형판...', icon: `${ASSET_BASE}/icons/res/ott_32.png` },
+  { label: '형판...', icon: `${ASSET_BASE}/icons/res/ott_32_8.png` },
   { label: '연시물', icon: `${ASSET_BASE}/icons/res/odp_32.png` },
 ];
 
