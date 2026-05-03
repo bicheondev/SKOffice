@@ -23,7 +23,7 @@ export default function StartCenter() {
   return (
     <div style={{ width:'100vw', height:'100vh', background:'#7a7a7a',
                   display:'flex', alignItems:'center', justifyContent:'center',
-                  fontFamily:"'천리마', sans-serif" }}>
+                  fontFamily:"'천리마', 'Lucida Grande', sans-serif" }}>
       <div style={{ width:`${W}px`, boxShadow:'2px 2px 8px rgba(0,0,0,0.5)',
                     display:'flex', flexDirection:'column' }}>
 

@@ -10,3 +10,8 @@
   font-family: '천리마';
   src: url('https://raw.githubusercontent.com/bicheondev/SKOffice/assets/fonts/kpcholim.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Lucida Grande';
+  src: local('Lucida Grande'), local('LucidaGrande');
+}
