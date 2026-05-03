@@ -1,0 +1,4 @@
+gap_id	area	hypothesis	todo	fallback	evidence_needed
+GAP-001	RPM extraction	Use python rpmfile tool to enumerate payloads	Implement extractor script with path metadata	Use placeholder shell with Korean terminology	Install extraction dependency and map icons/menus
+GAP-002	Menu/toolbar	Expected in soffice.cfg xml trees	Parse actual xml into menu/toolbar manifests	Fallback static minimal menus	Need extracted share/config/soffice.cfg/modules/*
+GAP-003	Start center geometry	Likely in backing_*.png and config	Measure coordinates from original assets	Use fixed 1024x768 legacy layout	Need backing images + ui descriptions
