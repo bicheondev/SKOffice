@@ -10,13 +10,40 @@ const createItems = [
 
 export default function StartCenter() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#808080] p-6" style={{ fontFamily: 'KPCholim' }}>
+    <div className="flex min-h-screen items-center justify-center bg-[#808080] p-6" style={{ fontFamily: "'천리마', sans-serif" }}>
       <div className="w-[600px] border border-[#8f8f8f] bg-[#f4f4f4] shadow-[0_1px_2px_rgba(0,0,0,0.25)]">
         <div className="relative flex h-8 items-center justify-center border-b border-[#c8c8c8] bg-[#e6e6e6]">
           <div className="absolute left-3 flex items-center gap-1.5">
-            <img src={`${ASSET_BASE}/theme/metacity/minimize.png`} alt="최소화" className="h-4 w-4" />
-            <img src={`${ASSET_BASE}/theme/metacity/maximize.png`} alt="최대화" className="h-4 w-4" />
-            <img src={`${ASSET_BASE}/theme/metacity/close.png`} alt="닫기" className="h-4 w-4" />
+            <span
+              aria-label="닫기"
+              style={{
+                backgroundImage: 'url(https://raw.githubusercontent.com/bicheondev/SKOffice/assets/theme/macstyle/Windows_qt.png)',
+                backgroundPosition: '0px 0px',
+                width: '14px',
+                height: '14px',
+                display: 'inline-block',
+              }}
+            />
+            <span
+              aria-label="최소화"
+              style={{
+                backgroundImage: 'url(https://raw.githubusercontent.com/bicheondev/SKOffice/assets/theme/macstyle/Windows_qt.png)',
+                backgroundPosition: '-14px 0px',
+                width: '14px',
+                height: '14px',
+                display: 'inline-block',
+              }}
+            />
+            <span
+              aria-label="최대화"
+              style={{
+                backgroundImage: 'url(https://raw.githubusercontent.com/bicheondev/SKOffice/assets/theme/macstyle/Windows_qt.png)',
+                backgroundPosition: '-28px 0px',
+                width: '14px',
+                height: '14px',
+                display: 'inline-block',
+              }}
+            />
           </div>
           <span className="text-[14px] font-medium text-[#666666]">서광사무처리</span>
         </div>

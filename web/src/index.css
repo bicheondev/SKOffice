@@ -4,3 +4,9 @@
   font-weight: 400;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: '천리마';
+  src: url('https://raw.githubusercontent.com/bicheondev/SKOffice/assets/fonts/kpcholim.ttf') format('truetype');
+}
