@@ -1,10 +1,4 @@
 const ASSET_BASE = 'https://raw.githubusercontent.com/bicheondev/SKOffice/assets';
-<<<<<<< HEAD
-const SHELL_LEFT = `${ASSET_BASE}/shell/backing_left.png`;
-const SHELL_SPACE = `${ASSET_BASE}/shell/backing_space.png`;
-const SHELL_RIGHT = `${ASSET_BASE}/shell/backing_right.png`;
-=======
->>>>>>> origin/main
 
 const apps = [
   { label: '글편집기', icon: `${ASSET_BASE}/icons/res/odt_32.png` },
@@ -37,32 +31,20 @@ export default function StartCenter() {
 
         <div className="relative flex h-[582px] overflow-hidden">
           <img
-<<<<<<< HEAD
-            src={SHELL_LEFT}
-=======
             src={`${ASSET_BASE}/shell/backing_left.png`}
->>>>>>> origin/main
             alt=""
             className="h-[582px] w-[229px] shrink-0"
           />
           <div
             className="h-[582px] flex-1"
             style={{
-<<<<<<< HEAD
-              backgroundImage: `url(${SHELL_SPACE})`,
-=======
               backgroundImage: `url(${ASSET_BASE}/shell/backing_space.png)`,
->>>>>>> origin/main
               backgroundRepeat: 'repeat-x',
               backgroundSize: '5px 582px',
             }}
           />
           <img
-<<<<<<< HEAD
-            src={SHELL_RIGHT}
-=======
             src={`${ASSET_BASE}/shell/backing_right.png`}
->>>>>>> origin/main
             alt=""
             className="h-[582px] w-[203px] shrink-0"
           />
