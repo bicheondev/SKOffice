@@ -12,10 +12,10 @@ const SPRITE = `url(${A}/theme/macstyle/Windows_qt.png)`;
 
 // OOo source: backing_left=229px, backing_right=203px, height=582px
 // shadow=32px each side, mnBtnPos=120, mnBtnTop=150
-const W = 750; // 229 + space + 203, space≈168
+const W = 873; // 229 + space + 203, space≈168
 const H = 582;
 const SHADOW = 32;
-const BTN_POS = 120; // button X start from content left
+const BTN_POS = 269; // 229+40 from source // button X start from content left
 const BTN_TOP = 150; // button Y start from content top
 
 export default function StartCenter() {
@@ -61,7 +61,7 @@ export default function StartCenter() {
                         backgroundSize:'203px 582px', backgroundRepeat:'no-repeat' }} />
 
           {/* Content overlay: positioned over the background */}
-          <div style={{ position:'absolute', left:'229px', top:`${SHADOW}px`,
+          <div style={{ position:'absolute', left:'269px', top:`${SHADOW}px`,
                         right:`${SHADOW}px`, bottom:`${SHADOW}px`,
                         display:'flex', flexDirection:'column' }}>
 
