@@ -10,8 +10,8 @@ const createItems = [
 
 export default function StartCenter() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#808080]" style={{ fontFamily: "'천리마', sans-serif" }}>
-      <div className="w-full h-screen flex flex-col border border-[#8f8f8f] bg-[#f4f4f4]">
+    <div className="w-screen h-screen bg-[#808080] flex flex-col" style={{ fontFamily: "'천리마', sans-serif" }}>
+      <div className="flex-1 flex flex-col overflow-hidden">
         <div className="relative flex h-8 items-center justify-center border-b border-[#c8c8c8]" style={{ backgroundImage: "url('https://raw.githubusercontent.com/bicheondev/SKOffice/assets/theme/titlebar.png')", backgroundSize: "100% 100%", backgroundRepeat: "no-repeat" }}>
           <div className="absolute left-3 flex items-center gap-1.5">
             <span
@@ -48,9 +48,9 @@ export default function StartCenter() {
           <span className="text-[14px] font-medium text-[#666666]">서광사무처리</span>
         </div>
 
-        <div className="flex h-[582px]">
+        <div className="flex flex-1 overflow-hidden">
           <div
-            className="h-full w-[229px] shrink-0"
+            className="w-[229px] shrink-0 self-stretch"
             style={{
               backgroundImage: `url(${ASSET_BASE}/shell/backing_left.png)`,
               backgroundSize: '229px 582px',
@@ -58,7 +58,7 @@ export default function StartCenter() {
             }}
           />
 
-          <div className="flex flex-1 flex-col bg-white px-8 py-8">
+          <div className="flex flex-1 flex-col bg-white px-8 py-8 overflow-auto">
             <h2 className="mb-8 text-[30px] font-bold tracking-[-0.02em] text-[#222222]">새 문서 만들기</h2>
 
             <div className="grid grid-cols-2 gap-x-12 gap-y-7">
