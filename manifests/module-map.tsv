@@ -1,0 +1,9 @@
+module_id	label_ko	package_hint	menu_source	toolbar_source	statusbar_source	status
+startcenter	시작센터	sgoffice3.0	pending extraction	pending extraction	pending extraction	hypothesis
+writer	본문문서	sgoffice3.0-writer	pending extraction	pending extraction	pending extraction	hypothesis
+calc	자료표	sgoffice3.0-calc	pending extraction	pending extraction	pending extraction	hypothesis
+impress	연시물	sgoffice3.0-impress	pending extraction	pending extraction	pending extraction	hypothesis
+draw	그림	sgoffice3.0-draw	pending extraction	pending extraction	pending extraction	hypothesis
+math	수학식	sgoffice3.0-math	pending extraction	pending extraction	pending extraction	hypothesis
+base	자료기지	sgoffice3.0-base	pending extraction	pending extraction	pending extraction	hypothesis
+templates	형판	sgoffice3.0	pending extraction	pending extraction	pending extraction	hypothesis

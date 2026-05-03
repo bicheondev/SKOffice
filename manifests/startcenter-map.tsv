@@ -1,0 +1,9 @@
+slot	label_ko	label_en	icon_id	source_evidence	status
+btn1	본문문서		icon_1	rpm package assets pending extraction	hypothesis
+btn2	자료표		icon_2	rpm package assets pending extraction	hypothesis
+btn3	연시물		icon_3	rpm package assets pending extraction	hypothesis
+btn4	그림		icon_4	rpm package assets pending extraction	hypothesis
+btn5	수학식		icon_5	rpm package assets pending extraction	hypothesis
+btn6	자료기지		icon_6	rpm package assets pending extraction	hypothesis
+btn7	형판		icon_7	rpm package assets pending extraction	hypothesis
+btn8	열기		icon_8	rpm package assets pending extraction	hypothesis
