@@ -15,3 +15,8 @@
   font-family: 'Lucida Grande';
   src: local('Lucida Grande'), local('LucidaGrande');
 }
+
+@font-face {
+  font-family: 'Lucida Grande';
+  src: url('https://raw.githubusercontent.com/bicheondev/SKOffice/assets/fonts/LucidaGrande.ttf') format('truetype');
+}
