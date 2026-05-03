@@ -12,7 +12,7 @@ export default function StartCenter() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#808080] p-6" style={{ fontFamily: "'천리마', sans-serif" }}>
       <div className="w-[600px] border border-[#8f8f8f] bg-[#f4f4f4] shadow-[0_1px_2px_rgba(0,0,0,0.25)]">
-        <div className="relative flex h-8 items-center justify-center border-b border-[#c8c8c8]">
+        <div className="relative flex h-8 items-center justify-center border-b border-[#c8c8c8]" style={{ backgroundImage: "url('https://raw.githubusercontent.com/bicheondev/SKOffice/assets/theme/titlebar.png')", backgroundSize: "100% 100%", backgroundRepeat: "no-repeat" }}>
           <div className="absolute left-3 flex items-center gap-1.5">
             <span
               aria-label="닫기"
