@@ -1,72 +1,58 @@
 const ASSET_BASE = 'https://raw.githubusercontent.com/bicheondev/SKOffice/assets';
 
-const apps = [
-  { label: '글편집기', icon: `${ASSET_BASE}/icons/res/odt_32.png` },
-  { label: '표편집기', icon: `${ASSET_BASE}/icons/res/ods_32.png` },
-  { label: '연시물', icon: `${ASSET_BASE}/icons/res/odp_32.png` },
-  { label: '그림', icon: `${ASSET_BASE}/icons/res/odg_32.png` },
+const createItems = [
+  { label: '본문문서', icon: `${ASSET_BASE}/icons/res/odt_32.png` },
   { label: '수학식', icon: `${ASSET_BASE}/icons/res/odf_32.png` },
-  { label: '자료표', icon: `${ASSET_BASE}/icons/res/odb_32.png` },
+  { label: '자료표', icon: `${ASSET_BASE}/icons/res/ods_32.png` },
+  { label: '형판...', icon: `${ASSET_BASE}/icons/res/ott_32.png` },
+  { label: '연시물', icon: `${ASSET_BASE}/icons/res/odp_32.png` },
 ];
 
 export default function StartCenter() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#6f6f6f] p-4">
-      <div className="w-[980px] border border-black bg-[#d4d0c8] shadow-[inset_1px_1px_0_#ffffff,inset_-1px_-1px_0_#808080]">
-        <div className="flex h-7 items-center justify-between bg-[#0a246a] px-2 text-sm text-white">
-          <span className="select-none">서광사무처리 3.0</span>
-          <div className="flex gap-1">
-            {['—', '□', '×'].map((symbol) => (
-              <button
-                key={symbol}
-                type="button"
-                aria-label={symbol}
-                className="flex h-5 w-5 items-center justify-center border border-[#d4d0c8] bg-[#c0c0c0] p-0 text-xs font-bold leading-none text-black"
-              >
-                {symbol}
-              </button>
-            ))}
+    <div className="flex min-h-screen items-center justify-center bg-[#808080] p-6">
+      <div className="w-[600px] border border-[#8f8f8f] bg-[#f4f4f4] shadow-[0_1px_2px_rgba(0,0,0,0.25)]">
+        <div className="relative flex h-8 items-center justify-center border-b border-[#c8c8c8] bg-[#e6e6e6]">
+          <div className="absolute left-3 flex items-center gap-2">
+            <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+            <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+            <span className="h-3 w-3 rounded-full bg-[#28c840]" />
           </div>
+          <span className="text-[14px] font-medium text-[#666666]">서광사무처리</span>
         </div>
 
-        <div className="relative flex h-[582px] overflow-hidden">
-          <img
-            src={`${ASSET_BASE}/shell/backing_left.png`}
-            alt=""
-            className="h-[582px] w-[229px] shrink-0"
-          />
+        <div className="flex h-[582px]">
           <div
-            className="h-[582px] flex-1"
+            className="h-full w-[229px] shrink-0"
             style={{
-              backgroundImage: `url(${ASSET_BASE}/shell/backing_space.png)`,
-              backgroundRepeat: 'repeat-x',
-              backgroundSize: '5px 582px',
+              backgroundImage: `url(${ASSET_BASE}/shell/backing_left.png)`,
+              backgroundSize: '229px 582px',
+              backgroundRepeat: 'no-repeat',
             }}
           />
-          <img
-            src={`${ASSET_BASE}/shell/backing_right.png`}
-            alt=""
-            className="h-[582px] w-[203px] shrink-0"
-          />
 
-          <div className="absolute left-5 top-8 flex w-[170px] flex-col gap-3">
-            {apps.map((app) => (
+          <div className="flex flex-1 flex-col bg-white px-8 py-8">
+            <h2 className="mb-8 text-[30px] font-bold tracking-[-0.02em] text-[#222222]">새 문서 만들기</h2>
+
+            <div className="grid grid-cols-2 gap-x-12 gap-y-7">
+              {createItems.map((item) => (
+                <button key={item.label} type="button" className="flex items-center gap-4 text-left">
+                  <img src={item.icon} alt="" className="h-8 w-8 shrink-0" />
+                  <span className="text-[22px] leading-none text-[#222222]">{item.label}</span>
+                </button>
+              ))}
+              <div />
+            </div>
+
+            <div className="mt-auto">
               <button
-                key={app.label}
                 type="button"
-                className="flex items-center gap-3 rounded-sm border border-transparent px-2 py-1 text-left hover:border-[#0a246a]"
+                className="inline-flex items-center gap-5 border border-[#b5b5b5] bg-[#f7f7f7] px-6 py-2 text-[22px] text-[#222222]"
               >
-                <img src={app.icon} alt="" className="h-8 w-8 shrink-0" />
-                <span className="text-[18px] leading-none text-white [text-shadow:1px_1px_1px_#1a1a1a]">
-                  {app.label}
-                </span>
+                <span>열기...</span>
+                <span className="text-[14px]">▼</span>
               </button>
-            ))}
-          </div>
-
-          <div className="absolute right-10 top-20 flex h-[420px] w-[360px] flex-col border border-[#a6a6a6] bg-white/70 p-4">
-            <h2 className="mb-3 border-b border-[#c5c5c5] pb-2 text-base text-[#333333]">최근 문서</h2>
-            <div className="flex flex-1 items-center justify-center text-base text-[#666666]">최근 문서 없음</div>
+            </div>
           </div>
         </div>
       </div>
