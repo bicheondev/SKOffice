@@ -75,7 +75,7 @@ export default function StartCenter() {
                     textAlign:'left', borderRadius:'3px', color:'#1a1a1a' }}
                     onMouseEnter={e => (e.currentTarget.style.background='rgba(255,255,255,0.6)')}
                     onMouseLeave={e => (e.currentTarget.style.background='none')}>
-                    <img src={icon} alt="" style={{ width:'40px', height:'40px', flexShrink:0 }} />
+                    <img src={icon} alt="" style={{ width:'32px', height:'32px', flexShrink:0 }} />
                     <span style={{ fontSize:'13px' }}>{label}</span>
                   </button>
                 ))}
