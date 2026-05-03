@@ -5,7 +5,7 @@ const APPS: [string, string, string][] = [
   ['수학식',   `${A}/icons/res/odf_32.png`,   'math'],
   ['자료표',   `${A}/icons/res/ods_32.png`,   'calc'],
   ['형판...',  `${A}/icons/res/ott_32_8.png`, 'template'],
-  ['연시물',   `${A}/icons/res/odp_32.png`,   'impress'],
+  ['연시물',   `${A}/icons/folder_32.png`,   'impress'],
 ];
 
 const SPRITE = `url(${A}/theme/macstyle/Windows_qt.png)`;
@@ -88,7 +88,7 @@ export default function StartCenter() {
                   color:'#1a1a1a', fontSize:'13px', borderRadius:'3px' }}
                   onMouseEnter={e => (e.currentTarget.style.background='rgba(255,255,255,0.6)')}
                   onMouseLeave={e => (e.currentTarget.style.background='none')}>
-                  <img src={`${A}/icons/res/odp_32.png`} alt="" style={{ width:'28px', height:'28px' }} />
+                  <img src={`${A}/icons/folder_32.png`} alt="" style={{ width:'28px', height:'28px' }} />
                   <span>열기...</span><span style={{ fontSize:'9px' }}>▼</span>
                 </button>
               </div>
