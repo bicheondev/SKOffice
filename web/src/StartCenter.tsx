@@ -67,7 +67,7 @@ export default function StartCenter() {
 
             {/* Buttons: 3 rows x 2 cols, starting at mnBtnTop=150 from content top */}
             <div style={{ marginTop:'20px' }}>
-              <h2 style={{ fontSize:'18px', fontWeight:'normal', marginBottom:'20px', marginTop:0, color:'#222', letterSpacing:'0.05em' }}>새 문서 만들기</h2>
+              <h2 style={{ fontSize:'28px', fontWeight:'normal', marginBottom:'24px', marginTop:0, color:'#222', letterSpacing:'0.1em' }}>새 문서 만들기</h2>
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'10px 16px' }}>
                 {APPS.map(([label, icon, key]) => (
                   <button key={key} style={{ display:'flex', alignItems:'center', gap:'8px',
@@ -75,29 +75,21 @@ export default function StartCenter() {
                     textAlign:'left', borderRadius:'3px', color:'#1a1a1a' }}
                     onMouseEnter={e => (e.currentTarget.style.background='rgba(255,255,255,0.6)')}
                     onMouseLeave={e => (e.currentTarget.style.background='none')}>
-                    <img src={icon} alt="" style={{ width:'32px', height:'32px', flexShrink:0 }} />
+                    <img src={icon} alt="" style={{ width:'40px', height:'40px', flexShrink:0 }} />
                     <span style={{ fontSize:'13px' }}>{label}</span>
                   </button>
                 ))}
               </div>
 
-              {/* Open / Template buttons */}
-              <div style={{ display:'flex', gap:'12px', marginTop:'24px' }}>
+              {/* Open button */}
+              <div style={{ marginTop:'24px' }}>
                 <button style={{ display:'flex', alignItems:'center', gap:'6px',
                   background:'none', border:'none', cursor:'pointer', padding:'4px',
                   color:'#1a1a1a', fontSize:'13px', borderRadius:'3px' }}
                   onMouseEnter={e => (e.currentTarget.style.background='rgba(255,255,255,0.6)')}
                   onMouseLeave={e => (e.currentTarget.style.background='none')}>
-                  <img src={`${A}/icons/res/odt_32.png`} alt="" style={{ width:'24px', height:'24px' }} />
+                  <img src={`${A}/icons/res/odp_32.png`} alt="" style={{ width:'28px', height:'28px' }} />
                   <span>열기...</span><span style={{ fontSize:'9px' }}>▼</span>
-                </button>
-                <button style={{ display:'flex', alignItems:'center', gap:'6px',
-                  background:'none', border:'none', cursor:'pointer', padding:'4px',
-                  color:'#1a1a1a', fontSize:'13px', borderRadius:'3px' }}
-                  onMouseEnter={e => (e.currentTarget.style.background='rgba(255,255,255,0.6)')}
-                  onMouseLeave={e => (e.currentTarget.style.background='none')}>
-                  <img src={`${A}/icons/res/ott_32_8.png`} alt="" style={{ width:'24px', height:'24px' }} />
-                  <span>형판...</span>
                 </button>
               </div>
             </div>
