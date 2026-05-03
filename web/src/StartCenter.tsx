@@ -21,9 +21,9 @@ const BTN_TOP = 150; // button Y start from content top
 export default function StartCenter() {
   return (
     <div style={{ width:'100vw', height:'100vh', background:`url(${A}/wallpaper/default.jpg) center/cover no-repeat`,
-                  display:'flex', alignItems:'center', justifyContent:'center',
+                  display:'flex', alignItems:'center', justifyContent:'center', padding:'40px',
                   fontFamily:"'천리마', 'Lucida Grande', sans-serif" }}>
-      <div style={{ width:`${W}px`, boxShadow:'2px 2px 8px rgba(0,0,0,0.5)',
+      <div style={{ width:`${W}px`, boxShadow:'0 4px 20px rgba(0,0,0,0.6)',
                     display:'flex', flexDirection:'column' }}>
 
         {/* Titlebar */}
