@@ -38,7 +38,7 @@ export default function StartCenter() {
               width:'14px', height:'14px', display:'inline-block', flexShrink:0 }} />
           ))}
           <span style={{ flex:1, textAlign:'center', fontSize:'13px',
-                         color:'#444', marginRight:'50px' }}>서광사무처리</span>
+                         color:'#263542', marginRight:'50px' }}>서광사무처리</span>
         </div>
 
         {/* Background: left + space + right */}
@@ -67,12 +67,12 @@ export default function StartCenter() {
 
             {/* Buttons: 3 rows x 2 cols, starting at mnBtnTop=150 from content top */}
             <div style={{ marginTop:'20px' }}>
-              <h2 style={{ fontSize:'28px', fontWeight:'normal', marginBottom:'24px', marginTop:0, color:'#222', letterSpacing:'0.1em' }}>새 문서 만들기</h2>
+              <h2 style={{ fontSize:'28px', fontWeight:'normal', marginBottom:'24px', marginTop:0, color:'#263542', letterSpacing:'0.1em' }}>새 문서 만들기</h2>
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'10px 16px' }}>
                 {APPS.map(([label, icon, key]) => (
                   <button key={key} style={{ display:'flex', alignItems:'center', gap:'8px',
                     background:'none', border:'none', cursor:'pointer', padding:'4px',
-                    textAlign:'left', borderRadius:'3px', color:'#1a1a1a' }}
+                    textAlign:'left', borderRadius:'3px', color:'#263542' }}
                     onMouseEnter={e => (e.currentTarget.style.background='rgba(255,255,255,0.6)')}
                     onMouseLeave={e => (e.currentTarget.style.background='none')}>
                     <img src={icon} alt="" style={{ width:'32px', height:'32px', flexShrink:0 }} />
@@ -85,7 +85,7 @@ export default function StartCenter() {
               <div style={{ marginTop:'24px' }}>
                 <button style={{ display:'flex', alignItems:'center', gap:'6px',
                   background:'none', border:'none', cursor:'pointer', padding:'4px',
-                  color:'#1a1a1a', fontSize:'13px', borderRadius:'3px' }}
+                  color:'#263542', fontSize:'13px', borderRadius:'3px' }}
                   onMouseEnter={e => (e.currentTarget.style.background='rgba(255,255,255,0.6)')}
                   onMouseLeave={e => (e.currentTarget.style.background='none')}>
                   <img src={`${A}/icons/folder_32.png`} alt="" style={{ width:'28px', height:'28px' }} />
