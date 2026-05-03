@@ -54,7 +54,7 @@ export default function StartCenter() {
             style={{
               backgroundImage: `url(${ASSET_BASE}/shell/backing_left.png)`,
               backgroundSize: '229px 582px',
-              backgroundRepeat: 'no-repeat',
+              backgroundRepeat: 'repeat-x',
             }}
           />
 
