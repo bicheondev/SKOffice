@@ -12,7 +12,7 @@ const SPRITE = `url(${A}/theme/macstyle/Windows_qt.png)`;
 
 // OOo source: backing_left=229px, backing_right=203px, height=582px
 // shadow=32px each side, mnBtnPos=120, mnBtnTop=150
-const W = 600; // 229 + space + 203, space≈168
+const W = 750; // 229 + space + 203, space≈168
 const H = 582;
 const SHADOW = 32;
 const BTN_POS = 120; // button X start from content left
