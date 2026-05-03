@@ -1,11 +1,11 @@
 const A = 'https://raw.githubusercontent.com/bicheondev/SKOffice/assets';
 
 const APPS = [
-  { label: '본문문서', icon: `${A}/icons/128x128_writer_doc-p.png`,  key: 'writer' },
-  { label: '수학식',   icon: `${A}/icons/128x128_math_doc-p.png`,    key: 'math' },
-  { label: '자료표',   icon: `${A}/icons/128x128_calc_doc-p.png`,    key: 'calc' },
+  { label: '본문문서', icon: `${A}/icons/res/odt_32.png`,  key: 'writer' },
+  { label: '수학식',   icon: `${A}/icons/res/odf_32.png`,    key: 'math' },
+  { label: '자료표',   icon: `${A}/icons/res/ods_32.png`,    key: 'calc' },
   { label: '형판...',  icon: `${A}/icons/res/ott_32_8.png`,          key: 'template' },
-  { label: '연시물',   icon: `${A}/icons/128x128_impress_doc-p.png`, key: 'impress' },
+  { label: '연시물',   icon: `${A}/icons/res/odp_32.png`, key: 'impress' },
 ];
 
 const SPRITE = `url(${A}/theme/macstyle/Windows_qt.png)`;
