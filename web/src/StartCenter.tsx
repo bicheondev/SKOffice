@@ -5,7 +5,7 @@ const APPS: [string, string, string][] = [
   ['수학식',   `${A}/icons/res/odf_32.png`,   'math'],
   ['자료표',   `${A}/icons/res/ods_32.png`,   'calc'],
   ['형판...',  `${A}/icons/res/ott_32_8.png`, 'template'],
-  ['연시물',   `${A}/icons/folder_32.png`,   'impress'],
+  ['연시물',   `${A}/icons/res/odp_32.png`,   'impress'],
 ];
 
 const SPRITE = `url(${A}/theme/macstyle/Windows_qt.png)`;
