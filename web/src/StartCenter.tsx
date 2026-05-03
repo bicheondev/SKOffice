@@ -24,14 +24,14 @@ export default function StartCenter() {
         </div>
 
         {/* Body */}
-        <div style={{ display:'flex', height:'382px' }}>
+        <div style={{ display:'flex', height:'460px' }}>
 
           {/* Left panel */}
-          <div style={{ width:'180px', flexShrink:0, backgroundImage:`url(${A}/shell/backing_left.png)`, backgroundSize:'180px 100%', backgroundRepeat:'no-repeat', backgroundColor:'#e8e8e8' }} />
+          <div style={{ width:'229px', flexShrink:0, backgroundImage:`url(${A}/shell/backing_left.png)`, backgroundSize:'229px 100%', backgroundRepeat:'no-repeat', backgroundColor:'#e8e8e8' }} />
 
           {/* Right panel */}
           <div style={{ flex:1, background:'white', display:'flex', flexDirection:'column', padding:'20px 24px' }}>
-            <h2 style={{ fontSize:'16px', fontWeight:'bold', marginBottom:'16px', marginTop:0, color:'#222' }}>새 문서 만들기</h2>
+            <h2 style={{ fontSize:'20px', fontWeight:'normal', marginBottom:'16px', marginTop:0, color:'#222' }}>새 문서 만들기</h2>
 
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'8px 24px' }}>
               {APPS.map(app => (
