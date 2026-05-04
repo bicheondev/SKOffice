@@ -27,7 +27,7 @@ export default function StartCenter() {
     // Desktop background
     <div style={{
       width:'100vw', height:'100vh',
-      background:`url(${A}/wallpaper/default.jpg) center/cover no-repeat`,
+      backgroundImage:`url(${A}/wallpaper/default.jpg)`, backgroundSize:'cover', backgroundPosition:'center', backgroundColor:'#868f97',
       display:'flex', alignItems:'center', justifyContent:'center',
       fontFamily:"'천리마', 'Lucida Grande', sans-serif"
     }}>
