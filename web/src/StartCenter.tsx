@@ -50,15 +50,15 @@ export default function StartCenter() {
           overflow: 'hidden',
           display: 'flex',
           flexDirection: 'column',
-          border: '4px solid #b8b8b8',
-          borderBottom: '4px solid #888',
+          border: '1px solid #999',
+          
         }}>
 
           {/* Titlebar: height=18px, gradient #808080→#c0c0c0 */}
           <div style={{
             height: '18px',
             flexShrink: 0,
-            background: 'linear-gradient(to right, #808080, #c0c0c0)',
+            backgroundImage: `url(${A}/theme/titlebar.png)`, backgroundSize: '100% 100%',
             display: 'flex',
             alignItems: 'center',
             paddingLeft: '4px',
