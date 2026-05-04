@@ -27,8 +27,8 @@ export default function StartCenter() {
       height: '100vh',
       position: 'relative',
       display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+      alignItems: 'flex-start',
+      justifyContent: 'center', paddingTop: '80px',
       fontFamily: "'천리마', 'Lucida Grande', sans-serif",
     }}>
       {/* Wallpaper */}
@@ -42,7 +42,7 @@ export default function StartCenter() {
       <div style={{
         position: 'absolute', inset: 0,
         background: '#868f97',
-        opacity: 0.35,
+        opacity: 0.65,
       }} />
 
       {/* Window with metacity shadow */}
@@ -60,7 +60,7 @@ export default function StartCenter() {
           backgroundImage: `url(${A}/theme/titlebar.png)`,
           backgroundSize: '100% 100%',
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           paddingLeft: '6px',
           gap: '5px',
           borderLeft: '4px solid #b0b0b0',
@@ -126,7 +126,7 @@ export default function StartCenter() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 16px' }}>
               {APPS.map(([label, icon, key]) => (
                 <button key={key} style={{
-                  display: 'flex', alignItems: 'center', gap: '8px',
+                  display: 'flex', alignItems: 'flex-start', gap: '8px',
                   background: 'none', border: 'none', cursor: 'pointer',
                   padding: '4px', textAlign: 'left', color: '#263542',
                 }}
@@ -140,7 +140,7 @@ export default function StartCenter() {
 
             <div style={{ marginTop: '24px' }}>
               <button style={{
-                display: 'flex', alignItems: 'center', gap: '6px',
+                display: 'flex', alignItems: 'flex-start', gap: '6px',
                 background: 'none', border: 'none', cursor: 'pointer',
                 padding: '4px', color: '#263542', fontSize: '13px',
               }}
