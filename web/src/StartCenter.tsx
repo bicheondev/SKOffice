@@ -10,48 +10,59 @@ const APPS: [string, string, string][] = [
 
 const SPRITE = `url(${A}/theme/macstyle/Windows_qt.png)`;
 
-// OOo source: backing_left=229px, backing_right=203px, height=582px
-// nShadow=32px, mnBtnPos=269px(229+40), mnBtnTop=150px
-// Window min width=873px (582*3/2)
-// Metacity XP-Grassy: border left/right/bottom=4px, radius=3px (macstyle gtkrc)
-// Metacity shadow: radius=6, offset=(-9,-7.5), opacity=0.66
-// VCL: workspace=#868f97, text=#263542
+// === Reverse-engineered constants ===
+// OOo backingwindow.cxx: backing_left=229px H=582px, mnBtnPos=229+40=269, mnBtnTop=150, nShadow=32
+// Metacity XP-Grassy: left/right/bottom border=4px, title gradient #808080→#c0c0c0
+// Metacity compositor: shadow radius=6, offset=(-9,-7.5), opacity=0.66
+// macstyle gtkrc: radius=3.0 (engine), border-radius top = 4px (Windows.png pixel analysis)
+// VCL settings.cxx: workspace=#868f97, labelText=#263542, dialog=COL_LIGHTGRAY=#c0c0c0
+// VCL settings.cxx: mnTitleHeight=18, button font size=11 normal, product=28 bold, welcome=18 bold
+// Window min width = 582 * 3/2 = 873px
 
 const W = 873;
 const H = 582;
+const SHADOW = 32;
+const BTN_POS = 269;  // 229 + 40
+const BTN_TOP = 150;
 
 export default function StartCenter() {
   return (
     <div style={{
-      width: '100vw', height: '100vh',
+      width: '100vw',
+      height: '100vh',
       backgroundImage: `url(${A}/wallpaper/default.jpg)`,
-      backgroundSize: 'cover', backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
       backgroundColor: '#868f97',
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       fontFamily: "'천리마', 'Lucida Grande', sans-serif",
     }}>
-      {/* Shadow wrapper - filter must be on outer div */}
+      {/* Metacity compositor shadow wrapper */}
       <div style={{
         filter: 'drop-shadow(9px 8px 12px rgba(0,0,0,0.66))',
       }}>
-        {/* Clip wrapper - borderRadius + overflow:hidden clips the shadow wrapper's children */}
+        {/* Metacity window frame: borderRadius top=4px, overflow hidden to clip */}
         <div style={{
-          borderTopLeftRadius: '5px', borderTopRightRadius: '5px',
+          borderTopLeftRadius: '4px',
+          borderTopRightRadius: '4px',
           overflow: 'hidden',
           display: 'flex',
           flexDirection: 'column',
-          background: '#868f97',
+          border: '4px solid #b8b8b8',
+          borderBottom: '4px solid #888',
         }}>
-          {/* Titlebar */}
+
+          {/* Titlebar: height=18px, gradient #808080→#c0c0c0 */}
           <div style={{
-            height: '22px',
+            height: '18px',
             flexShrink: 0,
-            backgroundImage: `url(${A}/theme/titlebar.png)`,
-            backgroundSize: '100% 100%',
+            background: 'linear-gradient(to right, #808080, #c0c0c0)',
             display: 'flex',
             alignItems: 'center',
-            paddingLeft: '6px',
-            gap: '5px',
+            paddingLeft: '4px',
+            gap: '4px',
           }}>
             {([['닫기','0px'],['최소화','-14px'],['최대화','-28px']] as [string,string][]).map(([label,pos]) => (
               <span key={label} aria-label={label} style={{
@@ -62,74 +73,99 @@ export default function StartCenter() {
               }} />
             ))}
             <span style={{
-              flex: 1, textAlign: 'center',
-              fontSize: '13px', color: '#444',
+              flex: 1,
+              textAlign: 'center',
+              fontSize: '11px',
+              fontWeight: 'normal',
+              color: '#263542',
               marginRight: '50px',
             }}>서광사무처리</span>
           </div>
 
           {/* Window body */}
           <div style={{
-            width: `${W}px`, height: `${H}px`,
-            display: 'flex', position: 'relative', overflow: 'hidden',
+            width: `${W}px`,
+            height: `${H}px`,
+            display: 'flex',
+            position: 'relative',
+            overflow: 'hidden',
           }}>
+            {/* backing_left 229px */}
             <div style={{
               width: '229px', flexShrink: 0, height: `${H}px`,
               backgroundImage: `url(${A}/shell/backing_left.png)`,
               backgroundSize: '229px 582px', backgroundRepeat: 'no-repeat',
             }} />
+            {/* backing_space tiled */}
             <div style={{
               flex: 1, height: `${H}px`,
               backgroundImage: `url(${A}/shell/backing_space.png)`,
-              backgroundRepeat: 'repeat-x', backgroundSize: `5px ${H}px`,
+              backgroundRepeat: 'repeat-x',
+              backgroundSize: `5px ${H}px`,
             }} />
+            {/* backing_right 203px */}
             <div style={{
               width: '203px', flexShrink: 0, height: `${H}px`,
               backgroundImage: `url(${A}/shell/backing_right.png)`,
               backgroundSize: '203px 582px', backgroundRepeat: 'no-repeat',
             }} />
 
+            {/* Content: left=mnBtnPos(269), top=mnBtnTop(150) from window origin */}
+            {/* shadow(32) already included in backing image */}
             <div style={{
               position: 'absolute',
-              left: '269px', top: '32px',
-              right: '32px', bottom: '32px',
-              display: 'flex', flexDirection: 'column',
+              left: `${BTN_POS}px`,
+              top: `${BTN_TOP}px`,
+              right: `${SHADOW}px`,
+              bottom: `${SHADOW}px`,
+              display: 'flex',
+              flexDirection: 'column',
             }}>
-              <h2 style={{
-                fontSize: '28px', fontWeight: 'normal',
-                marginBottom: '24px', marginTop: 0,
-                color: '#263542', letterSpacing: '0.1em',
-              }}>새 문서 만들기</h2>
+              {/* Welcome string: size=18, bold, color=#263542 */}
+              <div style={{
+                fontSize: '18px',
+                fontWeight: 'bold',
+                color: '#263542',
+                letterSpacing: '0.08em',
+                marginBottom: '20px',
+              }}>새 문서 만들기</div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 16px' }}>
+              {/* Buttons: font size=11, normal weight */}
+              {/* Layout: col0=writer/calc/impress, col1=math/template */}
+              {/* row spacing from source: nBDelta = imageHeight+10 */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 24px' }}>
                 {APPS.map(([label, icon, key]) => (
                   <button key={key} style={{
                     display: 'flex', alignItems: 'center', gap: '8px',
                     background: 'none', border: 'none', cursor: 'pointer',
-                    padding: '4px', textAlign: 'left', color: '#263542',
+                    padding: '0', textAlign: 'left', color: '#263542',
+                    fontSize: '11px', fontWeight: 'normal',
                   }}
-                    onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.6)')}
+                    onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.5)')}
                     onMouseLeave={e => (e.currentTarget.style.background = 'none')}>
                     <img src={icon} alt="" style={{ width: '32px', height: '32px', flexShrink: 0 }} />
-                    <span style={{ fontSize: '13px' }}>{label}</span>
+                    <span>{label}</span>
                   </button>
                 ))}
               </div>
 
+              {/* Open button: nB2Delta = 3*imageHeight/2 below last row */}
               <div style={{ marginTop: '24px' }}>
                 <button style={{
                   display: 'flex', alignItems: 'center', gap: '6px',
                   background: 'none', border: 'none', cursor: 'pointer',
-                  padding: '4px', color: '#263542', fontSize: '13px',
+                  padding: '0', color: '#263542', fontSize: '11px',
                 }}
-                  onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.6)')}
+                  onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.5)')}
                   onMouseLeave={e => (e.currentTarget.style.background = 'none')}>
-                  <img src={`${A}/icons/folder_32.png`} alt="" style={{ width: '28px', height: '28px' }} />
-                  <span>열기...</span><span style={{ fontSize: '9px' }}>▼</span>
+                  <img src={`${A}/icons/folder_32.png`} alt="" style={{ width: '32px', height: '32px' }} />
+                  <span>열기...</span>
+                  <span style={{ fontSize: '8px' }}>▼</span>
                 </button>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
