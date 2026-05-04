@@ -35,7 +35,7 @@ export default function StartCenter() {
       <div style={{
         display:'flex', flexDirection:'column',
         // metacity shadow: offset(-9,-7.5), radius=6→blur=12, opacity=0.66
-        filter:'drop-shadow(9px 8px 12px rgba(0,0,0,0.66))',
+        filter:'drop-shadow(9px 8px 12px rgba(0,0,0,0.66))', padding:'20px', background:'#868f97',
       }}>
         {/* Metacity titlebar */}
         <div style={{
